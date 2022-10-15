@@ -6,13 +6,18 @@
 //
 
 import UIKit
+protocol AddRecordViewControllerDelegate: AnyObject {
+    func  addExpense(expense: Expense)
+}
 
 class AddRecordViewController: UIViewController {
     
     @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var priceTextFirld: UITextField!
+    @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var categorySegment: UISegmentedControl!
+    
+    weak var delegate: AddRecordViewControllerDelegate?
     
     private lazy var datePicker: UIDatePicker = {
         let datePicker = UIDatePicker(frame: .zero)
@@ -30,7 +35,7 @@ class AddRecordViewController: UIViewController {
     
     
     func setup(){
-        priceTextFirld.keyboardType = .decimalPad
+        priceTextField.keyboardType = .decimalPad
         dateTextField.inputView = datePicker
         datePicker.addTarget(self, action: #selector(handleDatePicker(sender:)), for: .valueChanged)
         if #available(iOS 14, *) {
@@ -47,13 +52,15 @@ class AddRecordViewController: UIViewController {
     @IBAction func addButtonPressed() {
         guard let title = titleTextField.text,
               !title.isEmpty,
-              let priceString = priceTextFirld.text,
+              let priceString = priceTextField.text,
               let date = selectedDate,
               let price = Double(priceString) else {
             return
         }
         let category = getCategory()
         let expense = Expense(name: title, price: price, date: date, category: category)
+        delegate?.addExpense(expense: expense)
+        navigationController?.popViewController(animated: true)
     }
     
     private func getCategory() -> ExpenseCategory {

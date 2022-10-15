@@ -15,6 +15,8 @@
 		B279947E28F4932C00076B58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B279947C28F4932C00076B58 /* LaunchScreen.storyboard */; };
 		B279948728F493B400076B58 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279948628F493B400076B58 /* Expense.swift */; };
 		B279948A28F4964700076B58 /* AddRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279948928F4964700076B58 /* AddRecordViewController.swift */; };
+		B279948F28F996EA00076B58 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279948D28F996EA00076B58 /* ExpenseTableViewCell.swift */; };
+		B279949028F996EA00076B58 /* ExpenseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B279948E28F996EA00076B58 /* ExpenseTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		B279947F28F4932C00076B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B279948628F493B400076B58 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		B279948928F4964700076B58 /* AddRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordViewController.swift; sourceTree = "<group>"; };
+		B279948D28F996EA00076B58 /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
+		B279948E28F996EA00076B58 /* ExpenseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpenseTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		B279947028F4932A00076B58 /* Money tracker */ = {
 			isa = PBXGroup;
 			children = (
+				B279948C28F9967600076B58 /* Cell */,
 				B279948828F4960D00076B58 /* Controllers */,
 				B279948528F4935E00076B58 /* Models */,
 				B279947128F4932A00076B58 /* AppDelegate.swift */,
@@ -87,6 +92,15 @@
 				B279948928F4964700076B58 /* AddRecordViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B279948C28F9967600076B58 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B279948D28F996EA00076B58 /* ExpenseTableViewCell.swift */,
+				B279948E28F996EA00076B58 /* ExpenseTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B279949028F996EA00076B58 /* ExpenseTableViewCell.xib in Resources */,
 				B279947E28F4932C00076B58 /* LaunchScreen.storyboard in Resources */,
 				B279947B28F4932C00076B58 /* Assets.xcassets in Resources */,
 				B279947928F4932A00076B58 /* Main.storyboard in Resources */,
@@ -160,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B279948F28F996EA00076B58 /* ExpenseTableViewCell.swift in Sources */,
 				B279948728F493B400076B58 /* Expense.swift in Sources */,
 				B279947628F4932A00076B58 /* ExpensesTableViewController.swift in Sources */,
 				B279947228F4932A00076B58 /* AppDelegate.swift in Sources */,
