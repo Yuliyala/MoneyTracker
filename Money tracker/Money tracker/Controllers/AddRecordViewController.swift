@@ -42,6 +42,7 @@ class AddRecordViewController: UIViewController {
             datePicker.preferredDatePickerStyle = .wheels
         }
     }
+    
     @objc func handleDatePicker(sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMM yyyy"
@@ -62,6 +63,11 @@ class AddRecordViewController: UIViewController {
         delegate?.addExpense(expense: expense)
         navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func screenTap(_ sender: Any){
+            view.endEditing(true)
+    }
+    
     
     private func getCategory() -> ExpenseCategory {
         switch categorySegment.selectedSegmentIndex {

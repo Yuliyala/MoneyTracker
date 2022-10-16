@@ -28,7 +28,7 @@
         <!--Money Tracker-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ExpensesTableViewController" customModule="Money_tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExpensesTableViewController" id="BYZ-38-t0r" customClass="ExpensesTableViewController" customModule="Money_tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,6 +156,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="q4I-s0-W3W"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="CSl-fW-E5t" firstAttribute="top" secondItem="q4I-s0-W3W" secondAttribute="top" constant="20" id="3de-IA-5Bs"/>
                             <constraint firstItem="CSl-fW-E5t" firstAttribute="leading" secondItem="q4I-s0-W3W" secondAttribute="leading" constant="16" id="Q6b-k9-68t"/>
@@ -164,6 +165,9 @@
                             <constraint firstItem="q4I-s0-W3W" firstAttribute="bottom" secondItem="b3h-eT-jid" secondAttribute="bottom" constant="60" id="jD6-D1-D6B"/>
                             <constraint firstItem="b3h-eT-jid" firstAttribute="leading" secondItem="q4I-s0-W3W" secondAttribute="leading" constant="16" id="uIJ-fB-fQI"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="rlI-Oa-Pcs" appends="YES" id="Ha2-4X-Kbq"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="categorySegment" destination="EQA-e1-e7K" id="c2Z-Xf-dd6"/>
@@ -173,6 +177,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Js-Ea-rCa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="rlI-Oa-Pcs">
+                    <connections>
+                        <action selector="screenTap:" destination="ls2-pa-Mvu" id="8qb-bL-fsj"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="782.60869565217399" y="130.58035714285714"/>
         </scene>

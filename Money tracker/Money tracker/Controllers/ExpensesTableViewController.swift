@@ -14,6 +14,7 @@ class ExpensesTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTable()
     }
     
     @IBAction func addButtonPressed(_ sender: Any) {
@@ -28,7 +29,7 @@ class ExpensesTableViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "ExpenseTableViewCell", bundle: nil), forCellReuseIdentifier: ExpenseTableViewCell.identifier)
-        tableView.rowHeight = 60
+        tableView.rowHeight = 80
     }
     
 }
