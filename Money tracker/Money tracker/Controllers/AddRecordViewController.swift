@@ -6,6 +6,9 @@
 //
 
 import UIKit
+
+
+
 protocol AddRecordViewControllerDelegate: AnyObject {
     func  addExpense(expense: Expense)
 }
@@ -16,6 +19,8 @@ class AddRecordViewController: UIViewController {
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var categorySegment: UISegmentedControl!
+    
+    private let realmManager = RealmManager()
     
     weak var delegate: AddRecordViewControllerDelegate?
     
@@ -59,8 +64,8 @@ class AddRecordViewController: UIViewController {
             return
         }
         let category = getCategory()
-        let expense = Expense(name: title, price: price, date: date, category: category)
-        delegate?.addExpense(expense: expense)
+     
+        realmManager.saveExpense(name: title, price: price, date: date, category: category)
         navigationController?.popViewController(animated: true)
     }
     

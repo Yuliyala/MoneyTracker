@@ -7,14 +7,27 @@
 
 import UIKit
 
+
 class ExpensesTableViewController: UIViewController {
     
     private var dataSource = [Expense]()
     @IBOutlet weak var tableView: UITableView!
     
+    private let realmManager = RealmManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTable()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        readData()
+    }
+    
+    func readData() {
+        dataSource = realmManager.getExpenses()
+        tableView.reloadData()
     }
     
     @IBAction func addButtonPressed(_ sender: Any) {

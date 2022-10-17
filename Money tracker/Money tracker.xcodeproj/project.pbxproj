@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		206EA1515B589DD09F48F116 /* Pods_Money_tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0B1C517A1A80BA9CB2182B /* Pods_Money_tracker.framework */; };
 		B279947228F4932A00076B58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279947128F4932A00076B58 /* AppDelegate.swift */; };
 		B279947428F4932A00076B58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279947328F4932A00076B58 /* SceneDelegate.swift */; };
 		B279947628F4932A00076B58 /* ExpensesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279947528F4932A00076B58 /* ExpensesTableViewController.swift */; };
@@ -17,9 +18,13 @@
 		B279948A28F4964700076B58 /* AddRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279948928F4964700076B58 /* AddRecordViewController.swift */; };
 		B279948F28F996EA00076B58 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279948D28F996EA00076B58 /* ExpenseTableViewCell.swift */; };
 		B279949028F996EA00076B58 /* ExpenseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B279948E28F996EA00076B58 /* ExpenseTableViewCell.xib */; };
+		B279949328FDCE5C00076B58 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279949228FDCE5C00076B58 /* RealmManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		316247B69637F69066566FAA /* Pods-Money tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money tracker.debug.xcconfig"; path = "Target Support Files/Pods-Money tracker/Pods-Money tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		3E0B1C517A1A80BA9CB2182B /* Pods_Money_tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Money_tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EED33884389558CE41E8AB0 /* Pods-Money tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money tracker.release.xcconfig"; path = "Target Support Files/Pods-Money tracker/Pods-Money tracker.release.xcconfig"; sourceTree = "<group>"; };
 		B279946E28F4932A00076B58 /* Money tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Money tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B279947128F4932A00076B58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B279947328F4932A00076B58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +37,7 @@
 		B279948928F4964700076B58 /* AddRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordViewController.swift; sourceTree = "<group>"; };
 		B279948D28F996EA00076B58 /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
 		B279948E28F996EA00076B58 /* ExpenseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpenseTableViewCell.xib; sourceTree = "<group>"; };
+		B279949228FDCE5C00076B58 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				206EA1515B589DD09F48F116 /* Pods_Money_tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13C02F38426629B47C663D0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E0B1C517A1A80BA9CB2182B /* Pods_Money_tracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6ED24904D70C4EB946B98DC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				316247B69637F69066566FAA /* Pods-Money tracker.debug.xcconfig */,
+				5EED33884389558CE41E8AB0 /* Pods-Money tracker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B279946528F4932A00076B58 = {
 			isa = PBXGroup;
 			children = (
 				B279947028F4932A00076B58 /* Money tracker */,
 				B279946F28F4932A00076B58 /* Products */,
+				6ED24904D70C4EB946B98DC1 /* Pods */,
+				13C02F38426629B47C663D0B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +90,7 @@
 		B279947028F4932A00076B58 /* Money tracker */ = {
 			isa = PBXGroup;
 			children = (
+				B279949128FDCE2C00076B58 /* Services */,
 				B279948C28F9967600076B58 /* Cell */,
 				B279948828F4960D00076B58 /* Controllers */,
 				B279948528F4935E00076B58 /* Models */,
@@ -103,6 +130,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		B279949128FDCE2C00076B58 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B279949228FDCE5C00076B58 /* RealmManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B279948228F4932C00076B58 /* Build configuration list for PBXNativeTarget "Money tracker" */;
 			buildPhases = (
+				294A637564626A002771CAAB /* [CP] Check Pods Manifest.lock */,
 				B279946A28F4932A00076B58 /* Sources */,
 				B279946B28F4932A00076B58 /* Frameworks */,
 				B279946C28F4932A00076B58 /* Resources */,
+				B812CDBA80758429950A7AC2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,6 +207,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		294A637564626A002771CAAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Money tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B812CDBA80758429950A7AC2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Money tracker/Pods-Money tracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Money tracker/Pods-Money tracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Money tracker/Pods-Money tracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B279946A28F4932A00076B58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -180,6 +259,7 @@
 				B279947628F4932A00076B58 /* ExpensesTableViewController.swift in Sources */,
 				B279947228F4932A00076B58 /* AppDelegate.swift in Sources */,
 				B279948A28F4964700076B58 /* AddRecordViewController.swift in Sources */,
+				B279949328FDCE5C00076B58 /* RealmManager.swift in Sources */,
 				B279947428F4932A00076B58 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +402,7 @@
 		};
 		B279948328F4932C00076B58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 316247B69637F69066566FAA /* Pods-Money tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -350,6 +431,7 @@
 		};
 		B279948428F4932C00076B58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EED33884389558CE41E8AB0 /* Pods-Money tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
