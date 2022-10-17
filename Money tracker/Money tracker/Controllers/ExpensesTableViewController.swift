@@ -33,7 +33,6 @@ class ExpensesTableViewController: UIViewController {
     @IBAction func addButtonPressed(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let destination = storyboard.instantiateViewController(withIdentifier: "AddRecordViewController") as? AddRecordViewController else {return}
-        destination.delegate = self
         navigationController?.pushViewController(destination, animated: true)
         
     }
@@ -65,9 +64,3 @@ extension ExpensesTableViewController: UITableViewDelegate {
     
 }
 
-extension ExpensesTableViewController: AddRecordViewControllerDelegate {
-    func addExpense(expense: Expense) {
-        dataSource.append(expense)
-        tableView.reloadData()
-    }
-}

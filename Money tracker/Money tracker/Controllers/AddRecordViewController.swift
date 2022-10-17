@@ -9,9 +9,6 @@ import UIKit
 
 
 
-protocol AddRecordViewControllerDelegate: AnyObject {
-    func  addExpense(expense: Expense)
-}
 
 class AddRecordViewController: UIViewController {
     
@@ -21,8 +18,6 @@ class AddRecordViewController: UIViewController {
     @IBOutlet weak var categorySegment: UISegmentedControl!
     
     private let realmManager = RealmManager()
-    
-    weak var delegate: AddRecordViewControllerDelegate?
     
     private lazy var datePicker: UIDatePicker = {
         let datePicker = UIDatePicker(frame: .zero)
