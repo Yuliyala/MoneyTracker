@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		206EA1515B589DD09F48F116 /* Pods_Money_tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0B1C517A1A80BA9CB2182B /* Pods_Money_tracker.framework */; };
+		B279947228F4932A00076B58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279947128F4932A00076B58 /* AppDelegate.swift */; };
+		B279947428F4932A00076B58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279947328F4932A00076B58 /* SceneDelegate.swift */; };
+		B279947628F4932A00076B58 /* ExpensesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279947528F4932A00076B58 /* ExpensesTableViewController.swift */; };
+		B279947928F4932A00076B58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B279947728F4932A00076B58 /* Main.storyboard */; };
+		B279947B28F4932C00076B58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B279947A28F4932C00076B58 /* Assets.xcassets */; };
+		B279947E28F4932C00076B58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B279947C28F4932C00076B58 /* LaunchScreen.storyboard */; };
+		B279948728F493B400076B58 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279948628F493B400076B58 /* Expense.swift */; };
+		B279948A28F4964700076B58 /* AddRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279948928F4964700076B58 /* AddRecordViewController.swift */; };
+		B279948F28F996EA00076B58 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279948D28F996EA00076B58 /* ExpenseTableViewCell.swift */; };
+		B279949028F996EA00076B58 /* ExpenseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B279948E28F996EA00076B58 /* ExpenseTableViewCell.xib */; };
+		B279949328FDCE5C00076B58 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279949228FDCE5C00076B58 /* RealmManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		316247B69637F69066566FAA /* Pods-Money tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money tracker.debug.xcconfig"; path = "Target Support Files/Pods-Money tracker/Pods-Money tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		3E0B1C517A1A80BA9CB2182B /* Pods_Money_tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Money_tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EED33884389558CE41E8AB0 /* Pods-Money tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money tracker.release.xcconfig"; path = "Target Support Files/Pods-Money tracker/Pods-Money tracker.release.xcconfig"; sourceTree = "<group>"; };
+		B279946E28F4932A00076B58 /* Money tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Money tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B279947128F4932A00076B58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B279947328F4932A00076B58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B279947528F4932A00076B58 /* ExpensesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTableViewController.swift; sourceTree = "<group>"; };
+		B279947828F4932A00076B58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B279947A28F4932C00076B58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B279947D28F4932C00076B58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B279947F28F4932C00076B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B279948628F493B400076B58 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		B279948928F4964700076B58 /* AddRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordViewController.swift; sourceTree = "<group>"; };
+		B279948D28F996EA00076B58 /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
+		B279948E28F996EA00076B58 /* ExpenseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpenseTableViewCell.xib; sourceTree = "<group>"; };
+		B279949228FDCE5C00076B58 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B279946B28F4932A00076B58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				206EA1515B589DD09F48F116 /* Pods_Money_tracker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13C02F38426629B47C663D0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E0B1C517A1A80BA9CB2182B /* Pods_Money_tracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6ED24904D70C4EB946B98DC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				316247B69637F69066566FAA /* Pods-Money tracker.debug.xcconfig */,
+				5EED33884389558CE41E8AB0 /* Pods-Money tracker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B279946528F4932A00076B58 = {
+			isa = PBXGroup;
+			children = (
+				B279947028F4932A00076B58 /* Money tracker */,
+				B279946F28F4932A00076B58 /* Products */,
+				6ED24904D70C4EB946B98DC1 /* Pods */,
+				13C02F38426629B47C663D0B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B279946F28F4932A00076B58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B279946E28F4932A00076B58 /* Money tracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B279947028F4932A00076B58 /* Money tracker */ = {
+			isa = PBXGroup;
+			children = (
+				B279949128FDCE2C00076B58 /* Services */,
+				B279948C28F9967600076B58 /* Cell */,
+				B279948828F4960D00076B58 /* Controllers */,
+				B279948528F4935E00076B58 /* Models */,
+				B279947128F4932A00076B58 /* AppDelegate.swift */,
+				B279947328F4932A00076B58 /* SceneDelegate.swift */,
+				B279947728F4932A00076B58 /* Main.storyboard */,
+				B279947A28F4932C00076B58 /* Assets.xcassets */,
+				B279947C28F4932C00076B58 /* LaunchScreen.storyboard */,
+				B279947F28F4932C00076B58 /* Info.plist */,
+			);
+			path = "Money tracker";
+			sourceTree = "<group>";
+		};
+		B279948528F4935E00076B58 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B279948628F493B400076B58 /* Expense.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B279948828F4960D00076B58 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B279947528F4932A00076B58 /* ExpensesTableViewController.swift */,
+				B279948928F4964700076B58 /* AddRecordViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B279948C28F9967600076B58 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B279948D28F996EA00076B58 /* ExpenseTableViewCell.swift */,
+				B279948E28F996EA00076B58 /* ExpenseTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B279949128FDCE2C00076B58 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B279949228FDCE5C00076B58 /* RealmManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B279946D28F4932A00076B58 /* Money tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B279948228F4932C00076B58 /* Build configuration list for PBXNativeTarget "Money tracker" */;
+			buildPhases = (
+				294A637564626A002771CAAB /* [CP] Check Pods Manifest.lock */,
+				B279946A28F4932A00076B58 /* Sources */,
+				B279946B28F4932A00076B58 /* Frameworks */,
+				B279946C28F4932A00076B58 /* Resources */,
+				B812CDBA80758429950A7AC2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Money tracker";
+			productName = "Money tracker";
+			productReference = B279946E28F4932A00076B58 /* Money tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B279946628F4932A00076B58 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					B279946D28F4932A00076B58 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = B279946928F4932A00076B58 /* Build configuration list for PBXProject "Money tracker" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B279946528F4932A00076B58;
+			productRefGroup = B279946F28F4932A00076B58 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B279946D28F4932A00076B58 /* Money tracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B279946C28F4932A00076B58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B279949028F996EA00076B58 /* ExpenseTableViewCell.xib in Resources */,
+				B279947E28F4932C00076B58 /* LaunchScreen.storyboard in Resources */,
+				B279947B28F4932C00076B58 /* Assets.xcassets in Resources */,
+				B279947928F4932A00076B58 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		294A637564626A002771CAAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Money tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B812CDBA80758429950A7AC2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Money tracker/Pods-Money tracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Money tracker/Pods-Money tracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Money tracker/Pods-Money tracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B279946A28F4932A00076B58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B279948F28F996EA00076B58 /* ExpenseTableViewCell.swift in Sources */,
+				B279948728F493B400076B58 /* Expense.swift in Sources */,
+				B279947628F4932A00076B58 /* ExpensesTableViewController.swift in Sources */,
+				B279947228F4932A00076B58 /* AppDelegate.swift in Sources */,
+				B279948A28F4964700076B58 /* AddRecordViewController.swift in Sources */,
+				B279949328FDCE5C00076B58 /* RealmManager.swift in Sources */,
+				B279947428F4932A00076B58 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B279947728F4932A00076B58 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B279947828F4932A00076B58 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B279947C28F4932C00076B58 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B279947D28F4932C00076B58 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B279948028F4932C00076B58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B279948128F4932C00076B58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B279948328F4932C00076B58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 316247B69637F69066566FAA /* Pods-Money tracker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZX855577Y9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Money tracker/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Yuliya.Money-tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B279948428F4932C00076B58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EED33884389558CE41E8AB0 /* Pods-Money tracker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZX855577Y9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Money tracker/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Yuliya.Money-tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B279946928F4932A00076B58 /* Build configuration list for PBXProject "Money tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B279948028F4932C00076B58 /* Debug */,
+				B279948128F4932C00076B58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B279948228F4932C00076B58 /* Build configuration list for PBXNativeTarget "Money tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B279948328F4932C00076B58 /* Debug */,
+				B279948428F4932C00076B58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B279946628F4932A00076B58 /* Project object */;
+}
