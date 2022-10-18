@@ -29,6 +29,10 @@ class ExpensesTableViewController: UIViewController {
         dataSource = realmManager.getExpenses()
         tableView.reloadData()
     }
+ 
+    func deleteData() {
+        
+    }
     
     @IBAction func addButtonPressed(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -42,6 +46,7 @@ class ExpensesTableViewController: UIViewController {
         tableView.delegate = self
         tableView.register(UINib(nibName: "ExpenseTableViewCell", bundle: nil), forCellReuseIdentifier: ExpenseTableViewCell.identifier)
         tableView.rowHeight = 80
+        tableView.layer.cornerRadius = 20
     }
     
 }
@@ -61,6 +66,17 @@ extension ExpensesTableViewController: UITableViewDataSource {
 }
 
 extension ExpensesTableViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+       
+        let action = UIContextualAction(style: .normal, title: "delete") { _, _, completion in
+            self.dataSource.remove(at: indexPath.row)
+            self.tableView.reloadData()
+            completion(true)
+        }
+        action.backgroundColor = .red
+        return UISwipeActionsConfiguration(actions: [action])
+    }
     
 }
+
 
