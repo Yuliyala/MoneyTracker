@@ -7,9 +7,6 @@
 
 import UIKit
 
-
-
-
 class AddRecordViewController: UIViewController {
     
     @IBOutlet weak var titleTextField: UITextField!

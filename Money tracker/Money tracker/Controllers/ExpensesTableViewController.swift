@@ -12,9 +12,7 @@ class ExpensesTableViewController: UIViewController {
     
     private var dataSource = [Expense]()
     @IBOutlet weak var tableView: UITableView!
-    
     private let realmManager = RealmManager()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTable()
@@ -29,16 +27,11 @@ class ExpensesTableViewController: UIViewController {
         dataSource = realmManager.getExpenses()
         tableView.reloadData()
     }
- 
-    func deleteData() {
-        
-    }
     
     @IBAction func addButtonPressed(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let destination = storyboard.instantiateViewController(withIdentifier: "AddRecordViewController") as? AddRecordViewController else {return}
         navigationController?.pushViewController(destination, animated: true)
-        
     }
     
     func setupTable() {
@@ -48,7 +41,6 @@ class ExpensesTableViewController: UIViewController {
         tableView.rowHeight = 80
         tableView.layer.cornerRadius = 20
     }
-    
 }
 
 extension ExpensesTableViewController: UITableViewDataSource {
@@ -67,15 +59,15 @@ extension ExpensesTableViewController: UITableViewDataSource {
 
 extension ExpensesTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-       
-        let action = UIContextualAction(style: .normal, title: "delete") { _, _, completion in
+        let action = UIContextualAction(style: .normal, title: "delete") { [self] _, _, completion in
+            self.realmManager.deleteExpense(id:dataSource[indexPath.row].id)
             self.dataSource.remove(at: indexPath.row)
             self.tableView.reloadData()
             completion(true)
         }
         action.backgroundColor = .red
         return UISwipeActionsConfiguration(actions: [action])
-    }
+    }   
     
 }
 
