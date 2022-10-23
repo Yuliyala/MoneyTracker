@@ -61,6 +61,16 @@ extension ExpensesTableViewController: UITableViewDataSource {
 }
 
 extension ExpensesTableViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .normal, title: "delete") { [self] _, _, completion in
+            self.realmManager.deleteExpense(id:dataSource[indexPath.row].id)
+            self.dataSource.remove(at: indexPath.row)
+            self.tableView.reloadData()
+            completion(true)
+        }
+        action.backgroundColor = .red
+        return UISwipeActionsConfiguration(actions: [action])
+    }
     
 }
 
