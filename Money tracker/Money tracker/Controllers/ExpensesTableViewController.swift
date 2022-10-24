@@ -41,6 +41,7 @@ class ExpensesTableViewController: UIViewController {
         tableView.rowHeight = 80
         tableView.layer.cornerRadius = 20
     }
+
 }
 
 extension ExpensesTableViewController: UITableViewDataSource {
@@ -58,6 +59,7 @@ extension ExpensesTableViewController: UITableViewDataSource {
 }
 
 extension ExpensesTableViewController: UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .normal, title: "delete") { [self] _, _, completion in
             self.realmManager.deleteExpense(id:dataSource[indexPath.row].id)

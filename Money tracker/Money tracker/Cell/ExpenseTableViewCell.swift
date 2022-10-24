@@ -14,6 +14,7 @@ class ExpenseTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,6 +33,5 @@ class ExpenseTableViewCell: UITableViewCell {
         formatter.dateFormat = "MMM d yyyy"
         let formattedDateInString = formatter.string(from: expense.date)
         dateLabel.text = formattedDateInString
-        
     }
 }
