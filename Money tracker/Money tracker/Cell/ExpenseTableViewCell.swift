@@ -26,7 +26,6 @@ class ExpenseTableViewCell: UITableViewCell {
     }
     
     func setup(expense: Expense) {
-        
         titleLabel.text = expense.name
         priceLabel.text = String(expense.price) + "$"
         var time = Date()
@@ -34,6 +33,5 @@ class ExpenseTableViewCell: UITableViewCell {
         formatter.dateFormat = "MMM d yyyy"
         let formattedDateInString = formatter.string(from: expense.date)
         dateLabel.text = formattedDateInString
-//        categoryLabel.text = expense.category
     }
 }

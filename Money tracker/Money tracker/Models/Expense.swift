@@ -44,6 +44,5 @@ class ExpenseRealmModel: Object {
         model.date = date
         model.category = category.rawValue
         return model
-        
     }
 }
