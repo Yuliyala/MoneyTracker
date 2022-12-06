@@ -30,7 +30,6 @@ class AddRecordViewController: UIViewController {
         setup()
     }
     
-    
     func setup(){
         priceTextField.keyboardType = .decimalPad
         dateTextField.inputView = datePicker
@@ -65,7 +64,6 @@ class AddRecordViewController: UIViewController {
             view.endEditing(true)
     }
     
-    
     private func getCategory() -> ExpenseCategory {
         switch categorySegment.selectedSegmentIndex {
         case 0:
@@ -78,5 +76,4 @@ class AddRecordViewController: UIViewController {
             return .food
         }
     }
-    
 }
