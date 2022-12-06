@@ -19,6 +19,9 @@
 		B279948F28F996EA00076B58 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279948D28F996EA00076B58 /* ExpenseTableViewCell.swift */; };
 		B279949028F996EA00076B58 /* ExpenseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B279948E28F996EA00076B58 /* ExpenseTableViewCell.xib */; };
 		B279949328FDCE5C00076B58 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279949228FDCE5C00076B58 /* RealmManager.swift */; };
+		B2A8D8122906F60300F4CC20 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A8D8112906F60300F4CC20 /* StatisticsViewController.swift */; };
+		B2A8D81429070F9400F4CC20 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A8D81329070F9400F4CC20 /* ChartViewController.swift */; };
+		B2A8D816290FD15D00F4CC20 /* CalculateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A8D815290FD15D00F4CC20 /* CalculateManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		B279948D28F996EA00076B58 /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
 		B279948E28F996EA00076B58 /* ExpenseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpenseTableViewCell.xib; sourceTree = "<group>"; };
 		B279949228FDCE5C00076B58 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		B2A8D8112906F60300F4CC20 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		B2A8D81329070F9400F4CC20 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		B2A8D815290FD15D00F4CC20 /* CalculateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,8 @@
 			children = (
 				B279947528F4932A00076B58 /* ExpensesTableViewController.swift */,
 				B279948928F4964700076B58 /* AddRecordViewController.swift */,
+				B2A8D8112906F60300F4CC20 /* StatisticsViewController.swift */,
+				B2A8D81329070F9400F4CC20 /* ChartViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -134,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				B279949228FDCE5C00076B58 /* RealmManager.swift */,
+				B2A8D815290FD15D00F4CC20 /* CalculateManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -257,7 +266,10 @@
 				B279948F28F996EA00076B58 /* ExpenseTableViewCell.swift in Sources */,
 				B279948728F493B400076B58 /* Expense.swift in Sources */,
 				B279947628F4932A00076B58 /* ExpensesTableViewController.swift in Sources */,
+				B2A8D8122906F60300F4CC20 /* StatisticsViewController.swift in Sources */,
 				B279947228F4932A00076B58 /* AppDelegate.swift in Sources */,
+				B2A8D81429070F9400F4CC20 /* ChartViewController.swift in Sources */,
+				B2A8D816290FD15D00F4CC20 /* CalculateManager.swift in Sources */,
 				B279948A28F4964700076B58 /* AddRecordViewController.swift in Sources */,
 				B279949328FDCE5C00076B58 /* RealmManager.swift in Sources */,
 				B279947428F4932A00076B58 /* SceneDelegate.swift in Sources */,

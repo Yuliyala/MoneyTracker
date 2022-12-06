@@ -5,6 +5,8 @@ target 'Money tracker' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'RealmSwift', '~>10'
+  pod 'AAInfographics', :git => 'https://github.com/AAChartModel/AAChartKit-Swift.git'
+
 
   # Pods for Money tracker
 
